@@ -26,7 +26,24 @@ let cityData = cities;
   //alternative way: use forEach() function:
 //   cities.forEach(function(city){
 //       console.log(city)
-//       L.marker(city.location).addTo(map);
+//       L.marker(city.location).bindPopup('<h2>' + city.city + ', ' +
+ //           city.state + '</h2><hr> <h3>Population ' +city.population.toLocalestring()
+ //            + '</h3>').addTo(map);
 //   });
 //try arrow function
-cityData.forEach(city => L.marker(city.location).addTo(map));
+// cityData.forEach(city => L.marker(city.location).bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population.toLocaleString() + "</h3>")
+// .addTo(map));
+
+//use circle() or circleMarker()function
+// cityData.forEach(city => L.circleMarker(city.location).bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population.toLocaleString() + "</h3>")
+// .addTo(map));
+
+//change the radius when using circle()
+// cityData.forEach(city => L.circle(city.location,{radius: 100000}).bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population.toLocaleString() + "</h3>")
+// .addTo(map));
+
+//skill drill, change map style to dark map, circle color to orange, lineweight to 4, 
+//radius where the population number is decreased by 200,000.
+
+ cityData.forEach(city => L.circleMarker(city.location,{color: 'orange', lineweight: 4, radius: city.population/200000 }).bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population.toLocaleString() + "</h3>")
+ .addTo(map));
