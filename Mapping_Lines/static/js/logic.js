@@ -56,7 +56,6 @@ let line2=[
 
 
 L.polyline(line2,{
-  
   color: 'blue',
   weight:4,
   opacity: 0.5
