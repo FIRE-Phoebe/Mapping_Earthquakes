@@ -36,4 +36,8 @@ Main Page for Earthquakes Map
 ## Summary
 As we mapping Earthquakes data, each earthquake visually represented by a circle and color. The maps shows a higher magnitude has a larger diameter. Also,it presents a darker color. We create a pop up feature for each earthquake when clicked that will show the magnitude of the earthquake and the location of the earthquake. We successfully create teractive maps using GeoJSON data which can help us to explore earthquakes around the world. 
 
+_____________________________________________________________________________________________________________________________________________________________
+
+- Project Contributor: Phoebe J. Miao
+- Email: phoebem2021data@gmail.com
  
